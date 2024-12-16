@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>NYCHC About Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="a.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- CSS And JS  -->
+
+    <link href="components.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="components.js"></script>
+    <script src="helper.js"></script>
+    <script src="script.js"></script>
+
+<!-- Link for cards -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- SCRIPT -->
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">    
+  </script>
+  <!--  This is a font app for the icon-->
+  <script src="https://kit.fontawesome.com/92f16b5927.js" crossorigin="anonymous"></script>
+  <style>
+    /* Logo styling, when the file grabs the logo from the link, it overlaps with another img which is why background=image:none is needed */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+      background-image: none;
+      font-size: 2rem;
+    }
+    .carousel-control-prev-icon {
+      color: #FFF;
+    }
+    .carousel-control-next-icon {
+      color: #FFFFFF;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar-->
+ <div class="topnav">
+			<a  class="activepage" href="index.html"><img src="https://www.nyc.gov/assets/nypd/images/content/header/logo.png"width="110"height="45"></a>
+		<a href="page1.html">Information</a>
+		<a href="page2.html">Data Analysis</a>
+		
+	</div>
+	 <!-- These ids, classes, and functions are pre-prepared from pre-made js libraries and files, in the script link above there is the full code with the "carousel" termineolgies  which simplifies the process of web development by providing a set of ready-to-use components  -->
+<div>
+  <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel"> 
+    <div class="carousel-inner">
+      <div class="carousel-item active c-item">
+        <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2021-12/211210-stop-asian-hate-ew-404p-57ba9b.jpg" class="d-block w-100 c-img" alt="Slide 1">
+      </div>
+      <div class="carousel-item c-item">
+        <img src="https://theintercept.com/wp-content/uploads/2021/01/GettyImages-1220880268-ft.jpg?fit=2000%2C1000g" class="d-block w-100 c-img" alt="Slide 2">
+      </div>
+       <div class="carousel-item c-item">
+        <img src="https://wp-tid.zillowstatic.com/bedrock/app/uploads/sites/26/GettyImages-611099426-898e3a.jpg" class="d-block w-100 c-img" alt="Slide 3">
+      </div>
+       <div class="carousel-item c-item">
+        <img src="https://ktla.com/wp-content/uploads/sites/4/2021/04/GettyImages-1231771055.jpg" class="d-block w-100 c-img" alt="Slide 4">
+      </div>
+    </div>
+</div>
+    <!--The bottom indicators and button-like function, data-bs-target is used by bootstrap to make life 10000x  easier. You (mostly) do not need to write a single line of Javascript to use their pre-made JavaScript components. The data-target attribute should contain a CSS selector that points to the HTML Element that will be changed.  -->
+   
+    <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa-solid fa-arrow-left fa-lg" style="color: #ffffff;"></i></span>
+
+    </a>
+    <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa-solid fa-arrow-right fa-lg" style="color: #ffffff;"></i></i></i></span>
+  
+    </a>
+  </div>
+  
+<!--   Home Info -->
+  <div class="info">
+    <div class="vid">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PajhiHS-N-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 8px; box-shadow: 4px 6px 4px white;margin:25px;"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u2BZOYxFyAI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 8px; box-shadow: 4px 6px 4px white;margin:25px;"></iframe>
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/N-vFPsA9dlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 8px; box-shadow: 4px 6px 4px white;margin:25px;"></iframe>
+    </div>
+      <h1>General Information</h1>
+    <hr>
+    <section class=" tag intro" style="flex-direction:column;	padding: 45px;">
+    
+    <div  id="op1" class=" tag container" style="max-width:2140px;"></div>
+      
+    <div  id="op2" class=" tag container" style="max-width:2140px"></div>
+      
+    <div  id="op3" class=" tag container" style="max-width:2140px"></div>
+      
+    <div  id="op4" class=" tag container" style="max-width:2140px"></div>
+<!--Modals Reference CREDIT: Where I gained this knowledge of using buttons and creating modals with blocking and user interaction: https://cloud.tencent.com/developer/ask/sof/114459554  -->
+    </section>
+            <h1 style="align-items: center;">Different Scenarios</h1><hr>
+<section style="padding: 45px;">
+
+  <div class="work" style="color:black;padding-right: 500px;padding-left: 500px;">
+<div class="card ">
+			    <img class="work-img" src="https://media.istockphoto.com/id/1210736695/photo/group-of-multi-ethnic-teen-friends-taking-selfie-picture-outdoors.jpg?s=612x612&w=0&k=20&c=giaotHHgaSFe3QtOmFWPMV0lQQXf5487h4Gfvp9j6rY=">
+			  
+				<div class="work-content">Scenario - Ethnicity</div></a>
+<button id="but0">Open for more</button>
+
+<!-- The Modal -->
+<div id="modal0" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+<h4>Scenario - Ethnicity</h4>
+    <p>
+Two Palestinian university students speaking in Arabic were attending a department reception when another student, a white male, deliberately bumped into one of them. When one Palestinian student said, “Hey, watch where you’re going,” the white student responded by saying, “I’ll go wherever I want. This is my country, you Arab!” The aggressor proceeded to punch the Palestinian student in the face.
+</p><br>
+  </div>
+
+</div>
+
+
+
+            </div>
+
+   
+		<div class="card">
+			    <img class="work-img" src="https://assets.weforum.org/article/image/iYC_WLPC_-1xCMhgoNxc2WpasOIPq_Q4QofohQe6f4g.jpg"> 
+				<div class="work-content">Scenario - Color</div></a>
+      <!-- Button -->
+      <button id="but1">Open for more</button>
+
+<!-- The Modal -->
+<div id="modal1" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   <h4>Scenario - Color</h4>
+  <p>
+Six black men assaulted and seriously injured a white man and his Asian male friend as they were walking through a residential neighborhood. Witnesses stated the victims were attacked because they were trespassing in a “black” neighborhood.</p>
+<br>
+  </div>
+
+</div>
+            </div>
+
+ 
+<div class="card ">
+			    <img class="work-img" src="https://www.californialaborlaw.info/wp-content/uploads/2016/08/Prazis-Images.jpg">
+				<div class="work-content">Scenario - Disability</div></a>
+        <button id="but2">Open for more</button>
+
+<!-- The Modal -->
+<div id="modal2" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   <p>A group home for persons with psychiatric disabilities who were in transition back into the community was the site of a reported arson. Investigation revealed that neighbors had expressed many concerns about the group home in town meetings and were angry that the house was located in their community. Shortly before the fire was reported, a witness heard a man state, “I’ll get rid of those ‘crazies,’ I’ll burn them out.” Twelve persons, including patients and staff, suffered second and third degree burns.
+</p><br>
+  </div>
+
+</div>
+            </div>
+
+
+<div class="card">
+			    <img class="work-img" src="https://www.eastasiaforum.org/wp-content/uploads/2022/06/2021-11-10T153910Z_1645547568_RC2PRQ91NT6Z_RTRMADP_3_JAPAN-POLITICS-scaled.jpg">
+			    <a href="" target="_blank"> <!--Link to project-->
+				<div class="work-content">Scenario - Gender</div></a>
+        <button id="but3">Open for more</button>
+
+<!-- The Modal -->
+<div id="modal3" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   <h4>Scenario - Gender</h4>
+<p>A man entered a community college and shot and killed a female in a corridor. He then entered a classroom with 10 women and 48 men, fired a shot into the ceiling and said, “I want the women! I hate feminists!” He sent all of the men from the room, lined the women up against the wall and opened fire, killing 6 of the women and wounding the others.
+</p><br>
+  </div>
+
+</div>
+            </div>
+     <div class="card">
+			    <img class="work-img" src="https://www.witf.io/wp-content/uploads/2020/06/AP_20167642479160-1920x1279.jpg">
+				<div class="work-content">Scenario - Gender Identity</div></a>
+        <button id="but4">Open for more</button>
+
+<!-- The Modal -->
+<div id="modal4" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   <h4>Scenario - Gender Identity</h4>
+<p>A transgender woman was walking down the street near her home when three men walking toward her said, “Hey, what’s your problem? Huh?” She kept walking, trying to ignore them. However, as they got close, one yelled “We don’t want no queers in this neighborhood!” and a second one knocked her to the ground.</p><br>
+  </div>
+
+</div>
+            </div>
+    <div class="card">
+			    <img class="work-img" src="https://cochranfirm.com/wp-content/uploads/2021/03/Race-Sex-Age-Discrimination.png">
+			    <a href="" target="_blank"> <!--Link to project-->
+				<div class="work-content">Scenario - Race</div></a>
+        <button id="but5">Open for more</button>
+
+<!-- The Modal -->
+<div id="modal5" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+  <h4>Scenario - Race</h4>
+<p>In a parking lot next to a bar, a 29-year-old Japanese American male was attacked by a 51-year-old white male wielding a tire iron. The victim suffered severe lacerations and a broken arm. Investigation revealed that the offender and victim had previously exchanged racial insults in the bar. The offender initiated the exchange by calling the victim by a well-known and recognized epithet used against the Japanese and complained that the Japanese were taking away jobs from Americans.</p><br>
+  </div>
+
+</div>
+            </div>
+    <div class="card">
+			    <img class="work-img" src="https://www.trainingabc.com/images/E/Religion1.jpg">
+			    <a href="" target="_blank"> <!--Link to project-->
+				<div class="work-content">Scenario - Religion</div></a>
+        <button id="but6">Open for more</button>
+
+<!-- The Modal -->
+<div id="modal6" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   <p>Overnight, unknown persons broke into a synagogue and destroyed several priceless religious objects. The perpetrators drew a large swastika on the door and wrote “Death to Jews” on a wall. Although other valuable items were present, none were stolen.</p><br>
+  </div>
+
+</div>
+            </div>
+</div>
+</section>
+  </div>
+<!-- Footer -->
+  <div id="footer">
+    <div class="footer1"
+
+    <hr>
+          <h2>
+            Copyright 2023 by MELONIE CHIU. All Rights Reserved.
+          </h2>
+    <hr>
+     <a href="https://www.instagram.com/remkuro/"> <img src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c521.png"width="60"height="60"></a>
+     <a href="https://twitter.com/remkuro"> <img src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png"width="60"height="60"></a>
+        </div>
+     <div class="footer2"
+      <div>
+    <h2>Information Resources</h2>
+        <hr>
+         <a href="https://www.nyc.gov/site/nypd/index.page">New York City Police Department</a>
+        <a href="https://data.cityofnewyork.us/Health/New-York-City-Leading-Causes-of-Death/jb7j-dtam">NYC Open Data</a>
+   
+         
+    </div> 
+  </div>
+    </div>
+</body>
+
+</html>

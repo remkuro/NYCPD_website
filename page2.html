@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> Info</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="page2.css" rel="stylesheet" type="text/css" />
+ 
+  <!-- Libraries -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="c3.css" rel="stylesheet" type="text/css" />
+    <script src="d3.js"></script>
+    <script src="c3.js"></script>
+    <script src="helper.js"></script>
+    <script src="page2.js"></script>
+    <script src="components.js"></script>
+      <link href="components.css" rel="stylesheet" type="text/css" />
+<!-- Link for cards -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- SCRIPT -->
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">    
+  </script>
+  <!--  This is a font app for the icon-->
+  <script src="https://kit.fontawesome.com/92f16b5927.js" crossorigin="anonymous"></script>
+
+<!-- Nav Bar & Cover -->
+ <style>
+    /* Logo styling, when the file grabs the logo from the link, it overlaps with another img which is why background=image:none is needed */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+      background-image: none;
+      font-size: 2rem;
+    }
+    .carousel-control-prev-icon {
+      color: #FFF;
+    }
+    .carousel-control-next-icon {
+      color: #FFFFFF;
+    }
+
+  </style>
+</head>
+
+<body onload="init()">
+<!--  Nav Bar-->
+	<div class="topnav">
+			<a href="index.html"><img src="https://www.nyc.gov/assets/nypd/images/content/header/logo.png"width="110"height="45">
+		<a href="page1.html">Information</a>
+		<a class="activepage" href="page2.html">Data Analysis</a>
+	
+	</div>
+  <!-- These ids, classes, and functions are pre-prepared from pre-made js libraries and files, in the script link above there is the full code with the "carousel" termineolgies  which simplifies the process of web development by providing a set of ready-to-use components  -->
+<div>
+  <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel"> 
+    <div class="carousel-inner">
+      <div class="carousel-item active c-item">
+        <img src="https://www.newsnationnow.com/wp-content/uploads/sites/108/2023/03/GettyImages-1475062019.jpg?w=2560&h=1440&crop=1" class="d-block w-100 c-img" alt="Slide 1">
+      </div>
+      <div class="carousel-item c-item">
+        <img src="https://www.amny.com/wp-content/uploads/2022/03/DSC01317-copy-2-copy-scaled.jpg" class="d-block w-100 c-img" alt="Slide 2">
+      </div>
+       <div class="carousel-item c-item">
+        <img src="https://thecity.brightspotcdn.com/dims4/default/04e8406/2147483647/strip/true/crop/2700x1541+0+0/resize/1461x834!/quality/90/?url=https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FWj-pCYynEIdcUi4ZiPZWYaPQFD0%3D%2F0x0%3A2700x1800%2F2700x1800%2Ffilters%3Afocal%281222x596%3A1223x597%29%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_asset%2Ffile%2F23327204%2Fadams_safety_officers.jpg" class="d-block w-100 c-img" alt="Slide 3">
+      </div>
+       <div class="carousel-item c-item">
+        <img src="https://www.nydailynews.com/resizer/1EWVWuhkx_TqkzFh7zIqZ7hUYzs=/arc-anglerfish-arc2-prod-tronc/public/7HZT64PB2VHGVKJALMN34BH4BA.JPG" class="d-block w-100 c-img" alt="Slide 4">
+      </div>
+    </div>
+</div>
+    <!--The bottom indicators and button-like function, data-bs-target is used by bootstrap to make life 10000x  easier. You (mostly) do not need to write a single line of Javascript to use their pre-made JavaScript components. The data-target attribute should contain a CSS selector that points to the HTML Element that will be changed.  -->
+   
+    <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa-solid fa-arrow-left fa-lg" style="color: #ffffff;"></i></span>
+
+    </a>
+    <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa-solid fa-arrow-right fa-lg" style="color: #ffffff;"></i></i></i></span>
+  
+    </a>
+  </div>
+</body>
+<!--   Guide Info -->
+  <div class="container_bar">
+      <h4>The Hate Crime NYPD data has been compiled into the data representation that is provided below. Users can choose from a variety of different visual options to view the data by using the drop-down menu below, such as a bar chart, pie chart, gauge chart, etc.
+      </h4>
+    </div>
+<!--   Home Info -->
+  <div class="info" style="background-image: url(https://www.waremalcomb.com/wp-content/uploads/2014/11/page09.jpg);background-size:cover;">
+		<div class="column side">
+			<h1>Charts</h1>
+    <div id="panel">
+      <!-- Scenario Options -->
+      <!--By Motive of Ethnicity -->
+      <!-- Both the fade-in image and tag class will allow for the cards to appear to be "moving." the 'tag' class will allow for the scroll function to take effect and the fade-in image will give a bonus effect of the opacity going from 0 to 100% along with the tag moving the transtion-->
+      <div class="work">
+  <div class="card3 fade-in tag fitted" id="left">
+            <h2>By Motive of Race or Ethnicity</h2>
+      <p><span class="highlight">Option:</span><br>Chart analyzes the number of motives of race or ethnicity.</p>
+      <select id="chartType" style="width:200px;">
+        <option>Select Chart Type</option>
+        <option value="bar">Bar</option>
+        <option value="pie">Pie</option>
+        <option value="line">Line</option>
+        <option value="donut">Donut</option>
+        <option value="gauge">Gauge</option>
+        <option value="spline">Spline</option>
+      </select>
+      <br>
+           <a class="button" onclick="ByMotiveRace_E()"> Display </a>
+
+    </div>
+      <!-- Motive of Sexual Orientation -->
+    <div class="card3 fade-in tag fitted" id="left">
+            <h2>By Motive of Sexual Orientation</h2>
+      
+      <p><span class="highlight">Option:</span><br>Chart analyzes number of motives of sexual orientation.</p>
+            <select id="chartType2" style="width:200px;">
+        <option>Select Chart Type</option>
+        <option value="bar">Bar</option>
+        <option value="pie">Pie</option>
+        <option value="line">Line</option>
+        <option value="donut">Donut</option>
+        <option value="gauge">Gauge</option>
+        <option value="spline">Spline</option>
+      </select>
+      <br>
+           <a class="button" onclick="ByMotiveSexOrientation()"> Display </a>
+
+    </div>
+<!-- Motive By Religion -->
+       <div class=" fade-in tag fitted" id="left">
+            <h2>By Motive of Religion</h2>
+      <p><span class="highlight">Option:</span><br>Chart analyzes the number of motives of religion.</p>
+           <p><span class="highlight">Warning:</span><br>This chart may be slower than the previous ones and could crash the website, there is no solution for this but rather the issue of the dataset. Use at your own risk. </p>
+            <select id="chartType3" style="width:200px;">
+        <option>Select Chart Type</option>
+        <option value="bar">Bar</option>
+        <option value="pie">Pie</option>
+        <option value="line">Line</option>
+        <option value="donut">Donut</option>
+        <option value="gauge">Gauge</option>
+        <option value="spline">Spline</option>
+      </select>
+      <br>
+           <a class="button" onclick="ByMotiveReligion()"> Display </a>
+
+    </div>
+        <!-- End of Options -->
+      </div>
+      </div>
+		</div>
+  </div>
+
+  <!--Styled outputs, the class 'tag' is used to give a scroll effect (located in the helper.js file), the function will identify the element as a 'tag' and determine when it will appear similar to a fade-in transition  -->
+<div class="tag">
+<div class="layout_format layout1">
+        <h2>Motive of Race and Ethnicity Chart Display</h2>
+        <hr>
+  <br>
+             <div id="output"></div>
+      </div>
+</div>
+  
+<div class="tag">
+      <div class="layout_format layout2">
+     <h2>Motive of Sexual Orientation Chart Display</h2>
+              <hr>
+             <div id="output2"></div>
+      </div>
+</div>
+
+ <div class="tag">
+       <div class="layout_format layout3">
+     <h2>Motive of Religion Chart Display</h2>
+               <hr>
+             <div id="output3"></div>
+      </div>
+ </div>
+  <div class="tag">
+   <div class="info2">
+
+<h1>More About NYC</h1>
+           <hr>
+ <div style="display: flex; flex-direction: row;">
+        <div id="flipcard_output" class="card_f"></div>  
+     
+        <div id="flipcard_output2" class="card_f"></div>  
+    <div id="flipcard_output3" class="card_f"></div>  
+       <div id="flipcard_output4" class="card_f"></div>  
+       <div id="flipcard_output5" class="card_f"></div>  
+
+ </div>
+    </div>
+  </div>
+       <div class="layout_format layout3"></div>
+<!-- Footer -->
+  <div id="footer">
+    <div class="footer1"
+
+    <hr>
+          <h2>
+            Copyright 2023 by MELONIE CHIU. All Rights Reserved.
+          </h2>
+    <hr>
+     <a href="https://www.instagram.com/remkuro/"> <img src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c521.png"width="60"height="60"></a>
+     <a href="https://twitter.com/remkuro"> <img src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png"width="60"height="60"></a>
+        </div>
+     <div class="footer2"
+      <div>
+    <h2>Information Resources</h2>
+        <hr>
+         <a href="https://www.nyc.gov/site/nypd/index.page">New York City Police Department</a>
+        <a href="https://data.cityofnewyork.us/Health/New-York-City-Leading-Causes-of-Death/jb7j-dtam">NYC Open Data</a>
+   
+         
+    </div> 
+  </div>
+ 
+  </div>
+</html>

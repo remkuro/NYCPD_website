@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> Data Info</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="page1.css">
+  
+  <!-- Library and JS -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="helper.js"></script>
+    <script src="script.js"></script>
+  
+    <link href="components.css" rel="stylesheet" type="text/css" />
+    <script src="components.js"></script>
+
+
+<!-- Link for cards -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- SCRIPT -->
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">    
+  </script>
+  <!--  This is a font app for the icon-->
+  <script src="https://kit.fontawesome.com/92f16b5927.js" crossorigin="anonymous"></script>
+
+<!-- Nav Bar & Cover -->
+ <style>
+    /* Logo styling, when the file grabs the logo from the link, it overlaps with another img which is why background=image:none is needed */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+      background-image: none;
+      font-size: 2rem;
+    }
+    .carousel-control-prev-icon {
+      color: #FFF;
+    }
+    .carousel-control-next-icon {
+      color: #FFFFFF;
+    }
+
+  </style>
+</head>
+
+<body onload="init()">
+
+  <!-- Navigation Bar-->
+ <div class="topnav">
+			<a href="index.html"><img src="https://www.nyc.gov/assets/nypd/images/content/header/logo.png"width="110"height="45">
+		<a class="activepage" href="page1.html">Information</a>
+		<a href="page2.html">Data Analysis</a>
+	
+	</div>
+	 <!-- These ids, classes, and functions are pre-prepared from pre-made js libraries and files, in the script link above there is the full code with the "carousel" termineolgies  which simplifies the process of web development by providing a set of ready-to-use components  -->
+<div>
+  <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel"> 
+    <div class="carousel-inner">
+      <div class="carousel-item active c-item">
+        <img src="https://nypost.com/wp-content/uploads/sites/2/2022/08/nypd-streets-04.jpg" class="d-block w-100 c-img" alt="Slide 1">
+      </div>
+      <div class="carousel-item c-item">
+        <img src="https://pimages.toolbox.com/wp-content/uploads/2021/05/26045107/Filtering-Works-1.png" class="d-block w-100 c-img" alt="Slide 2">
+      </div>
+       <div class="carousel-item c-item">
+        <img src="https://cdn.boldbi.com/wp/blogs/data-filtering/github-dashboard.jpg" class="d-block w-100 c-img" alt="Slide 3">
+      </div>
+       <div class="carousel-item c-item">
+        <img src="https://www.businessanalyze.com/wp-content/uploads/2021/05/BA-new-How-to-use-filters.png" class="d-block w-100 c-img" alt="Slide 4">
+      </div>
+    </div>
+</div>
+    <!--The bottom indicators and button-like function, data-bs-target is used by bootstrap to make life 10000x  easier. You (mostly) do not need to write a single line of Javascript to use their pre-made JavaScript components. The data-target attribute should contain a CSS selector that points to the HTML Element that will be changed.  -->
+   
+    <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa-solid fa-arrow-left fa-lg" style="color: #ffffff;"></i></span>
+
+    </a>
+    <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa-solid fa-arrow-right fa-lg" style="color: #ffffff;"></i></i></i></span>
+  
+    </a>
+  </div>
+<!--   Guide Info -->
+  <div class="container_bar">
+      <h4>A filter is a computer program or subroutine to process a stream, producing another stream. While a single filter can be used individually, they are frequently strung together to form a pipeline. Some operating systems such as Unix are rich with filter programs.</h4>
+    </div>
+<!--   Home Info -->
+  <div class="info">
+		<div >
+			<h1>Filter Options</h1>
+    <h2>Scroll Down For All Cards</h2>
+      <div class="center">
+ <hr>
+    <div id="results"> </div>
+     <hr>
+<!--Filter 1  -->
+<div class="card3 fade-in tag fitted" id="left">
+          <h2>By Full Complaint ID</h2>
+          <p><span class="highlight">Option:</span> Filter entries by a specific full complaint ID.</p>
+        Full Complaint ID: <select id="fci"></select>
+          <hr></hr>
+          <a class="button3" onclick="FilterByFCI()"> Search </a>
+        </div>
+      <br>
+<!--Filter 2  -->
+        <div class="card3 fade-in tag  fitted" id="left">
+          <h2>By Complaint Year</h2>
+          <p><span class="highlight">Option:</span> Filter entries by a specific complaint year.</p>
+        Complaint Year: <select id="cyn"></select>
+          <hr></hr>
+          <a class="button3" onclick="FilterByCYN()"> Search </a>
+        </div>
+        <!--Filter 3  -->
+ <div class="card3 fade-in tag  fitted " id="left">
+          <h2>By County and Patrol</h2>
+          <p><span class="highlight">Option:</span> Filter entries by a county and patrol</p>
+          Borough Patrol: <select id="pbn"></select>
+        County: <select id="county"></select>
+          <hr></hr>
+          <a class="button3" onclick="FilterByCountyAndPatrol()"> Search </a>
+        </div>
+
+ <!--Filter 4  -->
+ <div class="card3 fade-in tag fitted" id="left">
+          <h2>By Motive or Offense</h2>
+          <p><span class="highlight">Option:</span> Filter entries by bias motive or offense.</p>
+          Offense: <select id="offense"></select>
+       Motive: <select id="motive"></select>
+          <hr></hr>
+          <a class="button3" onclick="FilterByOffenseOrMotive()"> Search </a>
+        </div>
+ <!--Filter 5  -->
+ <div class="card3 fade-in tag  fitted" id="left">
+          <h2>By Arrest Date or ID</h2>
+          <p><span class="highlight">Option:</span> Filter entries by arrest id or arrest date.</p>
+        Arrest ID: <select id="arrest_id"></select>
+       Arrest Date: <select id="arrest_date"></select>
+          <hr></hr>
+          <a class="button3" onclick="FilterByAdorAi()"> Search </a>
+        </div>
+
+      </div>
+    </div>
+   
+      <div id="rightPanel"></div>
+
+		    </div>
+  
+  <div>
+    <div class="info">
+         <hr><h1>General Output</h1>         <hr>
+       </div>
+    <div class="info">
+        <div id="results2"> </div>
+      <hr>
+    </div>
+ <div class="info">
+   <div id="output" class="container" >
+      <div id="leftPanel" class="container" ></div>
+  
+        </div>
+ </div>
+  </div>
+  </div>
+  <!-- Footer -->
+  <div id="footer">
+    <div class="footer1"
+
+    <hr>
+          <h2>
+            Copyright 2023 by MELONIE CHIU. All Rights Reserved.
+          </h2>
+    <hr>
+     <a href="https://www.instagram.com/remkuro/"> <img src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c521.png"width="60"height="60"></a>
+     <a href="https://twitter.com/remkuro"> <img src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png"width="60"height="60"></a>
+        </div>
+     <div class="footer2"
+      <div>
+    <h2>Information Resources</h2>
+        <hr>
+         <a href="https://www.nyc.gov/site/nypd/index.page">New York City Police Department</a>
+        <a href="https://data.cityofnewyork.us/Health/New-York-City-Leading-Causes-of-Death/jb7j-dtam">NYC Open Data</a>
+   
+         
+    </div> 
+  </div>
+</body>
+
+</html>
